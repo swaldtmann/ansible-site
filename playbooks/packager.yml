@@ -1,0 +1,16 @@
+---
+- name: Playbook packager.yml
+  hosts: all
+  become: yes
+
+  tasks:
+    - name: Zeige den automatisch gefundenen Packager
+      package_facts:
+        manager: "auto"
+      register: pf
+
+    - name: Zeige die zurückgelieferten Variabeln
+      debug: var=pf
+
+    - name: Zeige die gefundenen Pakete
+      debug: var=ansible_facts.packages

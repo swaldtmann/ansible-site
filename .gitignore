@@ -1,0 +1,4 @@
+# .gitignore fuer ansible
+*.retry
+#keep/**
+ansible.log

@@ -6,7 +6,8 @@
 - <https://git-scm.com/book/de/v2>
 - <https://ansible-tips-and-tricks.readthedocs.io/en/latest/os-dependent-tasks/installing_packages/>
 - <https://docs.ansible.com/ansible/latest/user_guide/playbooks_reuse.html>
-- <https://docs.ansible.com/ansible/2.6/user_guide/playbooks_reuse_roles.html>
+- <https://docs.ansible.com/ansible/latest/user_guide/playbooks_reuse_roles.html>
+- <https://docs.ansible.com/ansible/latest/user_guide/playbooks_debugger.html>
 - <https://docs.ansible.com/ansible/latest/user_guide/playbooks_variables.html#variable-precedence-where-should-i-put-a-variable>
 
 

@@ -1,15 +1,14 @@
 # Linkliste
 - <https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet>
+- <https://git-scm.com/book/de/v2>
 - <https://docs.ansible.com/ansible/latest/index.html>
 - <https://docs.ansible.com/ansible/latest/user_guide/intro_adhoc.html>
 - <https://docs.ansible.com/ansible/latest/user_guide/playbooks_best_practices.html>
-- <https://git-scm.com/book/de/v2>
-- <https://ansible-tips-and-tricks.readthedocs.io/en/latest/os-dependent-tasks/installing_packages/>
 - <https://docs.ansible.com/ansible/latest/user_guide/playbooks_reuse.html>
 - <https://docs.ansible.com/ansible/latest/user_guide/playbooks_reuse_roles.html>
 - <https://docs.ansible.com/ansible/latest/user_guide/playbooks_debugger.html>
 - <https://docs.ansible.com/ansible/latest/user_guide/playbooks_variables.html#variable-precedence-where-should-i-put-a-variable>
-
+- <https://ansible-tips-and-tricks.readthedocs.io/en/latest/os-dependent-tasks/installing_packages/>
 
 ## Kommunikation und Quellen
 - <https://www.ansible.com/>

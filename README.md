@@ -13,7 +13,9 @@
 - [ansible.cfg](ansible.cfg)
 
 ## Diverse Runscripts im lokalen Verzeichnis
+- [check.sh](check.sh)
 - [run.sh](run.sh)
+- [debug.sh](debug.sh)
 
 ## Vault file
 - [vault.yml](inventories/test/group_vars/all/vault.yml)

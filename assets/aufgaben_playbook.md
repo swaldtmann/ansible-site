@@ -5,7 +5,7 @@ Speichern Sie das Script für jede Aufgabe in einer YAML Datei im Verzeichnis [p
 ## Linux
 
 ### Basic 1
-Überprüfen Sie die Verbindung zum remote_host als Adhoc Kommando mit dem ping Modul.
+Überprüfen Sie die Verbindung zum remote_host als Adhoc Kommando mit dem ping Modul und mit einem Playbook.
 
 ### Basic 2
 Erstellen Sie zwei Benutzer auf dem Zielsystem mit dem Modul user.
@@ -49,7 +49,7 @@ Führen Sie die Aufgabe Basic 5 aus und vergeben Sie für jedes playbook ein eig
 ## Windows
 
 ### Basic 1
-Überprüfen Sie die Verbindung zum remote_host als Adhoc Kommando mit dem win_ping Modul.
+Überprüfen Sie die Verbindung zum remote_host als Adhoc Kommando mit dem win_ping Modul und mit einem Playbook.
 
 ### Basic 2
 Erstellen Sie zwei Benutzer auf dem Zielsystem mit dem Modul win_user.

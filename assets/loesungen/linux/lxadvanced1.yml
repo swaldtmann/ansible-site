@@ -1,0 +1,7 @@
+---
+- name: Playbook lxadvanced1.yml
+  hosts: linux
+
+  tasks:
+  - name: Ping auf alle Linux Hosts
+    ping:

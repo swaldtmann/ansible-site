@@ -1,0 +1,23 @@
+---
+- name: Playbook lxadvanced2.yml
+  hosts: linux
+
+  tasks:
+
+    - name: Erstelle Gruppen
+      group:
+        name: "{{ item }}"
+        state: present
+      loop:
+        - bob
+        - bert
+
+    - name: Erstelle Benutzer
+      user:
+        name: "{{ item.name }}"
+        group: "{{ item.name }}"
+        password: "{{ item.password | password_hash('sha512') }}"
+        state: present
+      loop:
+        - { name: 'bob', password: 'bob' }
+        - { name: 'bert', password: 'bert' }

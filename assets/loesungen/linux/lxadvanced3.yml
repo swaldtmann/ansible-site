@@ -1,0 +1,16 @@
+---
+- name: Playbook lxadvanced3.yml
+  hosts: linux
+
+  tasks:
+
+    - name: Erstelle Verzeichnis {{ la3_dir }}
+      file:
+        path: "{{ la3_dir }}"
+        state: directory
+
+    - name: Kopiere Dateien
+      copy:
+        src: "{{ inventory_dir }}/../../files/{{ item }}"
+        dest: "{{ la3_dir }}"
+      loop: "{{ la3_files }}"

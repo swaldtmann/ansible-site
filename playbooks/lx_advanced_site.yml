@@ -1,0 +1,14 @@
+---
+# lx_advanced_site.yml
+
+- name: Import von lxadvanced1.yml
+  import_playbook: "{{ playbook_dir }}/../assets/loesungen/linux/lxadvanced1.yml"
+  tags: lxadvanced1
+
+- name: Import von lxadvanced2.yml
+  import_playbook: "{{ playbook_dir }}/../assets/loesungen/linux/lxadvanced2.yml"
+  tags: lxadvanced2
+
+- name: Import von lxadvanced3.yml
+  import_playbook: "{{ playbook_dir }}/../assets/loesungen/linux/lxadvanced3.yml"
+  tags: lxadvanced3

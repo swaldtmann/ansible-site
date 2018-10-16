@@ -3,16 +3,12 @@
 
 - name: Import von lxbasic1.yml
   import_playbook: "{{ playbook_dir }}/../assets/loesungen/linux/lxbasic1.yml"
-  tags: lxbasic1
 
 - name: Import von lxbasic2.yml
   import_playbook: "{{ playbook_dir }}/../assets/loesungen/linux/lxbasic2.yml"
-  tags: lxbasic2
 
 - name: Import von lxbasic3.yml
   import_playbook: "{{ playbook_dir }}/../assets/loesungen/linux/lxbasic3.yml"
-  tags: lxbasic3
 
 - name: Import von lxbasic4.yml
   import_playbook: "{{ playbook_dir }}/../assets/loesungen/linux/lxbasic4.yml"
-  tags: lxbasic4

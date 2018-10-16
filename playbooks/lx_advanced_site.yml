@@ -12,3 +12,7 @@
 - name: Import von lxadvanced3.yml
   import_playbook: "{{ playbook_dir }}/../assets/loesungen/linux/lxadvanced3.yml"
   tags: lxadvanced3
+
+- name: Import von lxadvanced4.yml
+  import_playbook: "{{ playbook_dir }}/../assets/loesungen/linux/lxadvanced4.yml"
+  tags: lxadvanced4

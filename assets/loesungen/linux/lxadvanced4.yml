@@ -1,0 +1,15 @@
+---
+- name: Playbook lxadvanced4.yml
+  hosts: linux
+  become: yes
+
+  tasks:
+  - name: Installiere Pakete
+    yum: 
+      name: "{{ item }}"
+      state: latest
+    loop:
+      - git-all
+      - curl
+    when: ansible_distribution == 'CentOS' or ansible_distribution == 'Red Hat Enterprise Linux'
+

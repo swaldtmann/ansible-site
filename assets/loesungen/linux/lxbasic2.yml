@@ -1,0 +1,28 @@
+---
+- name: Playbook lxbasic2.yml
+  hosts: linux
+
+  tasks:
+    - name: Erstelle Gruppe für Benutzer bob
+      group:
+        name: bob
+        state: present
+
+    - name: Erstelle Benutzer bob
+      user:
+        name: bob
+        group: bob
+        password: "{{ 'test'|password_hash('sha512') }}"
+        state: present
+
+    - name: Erstelle Gruppe für Benutzer bert
+      group:
+        name: bert
+        state: present
+
+    - name: Erstelle Benutzer bert
+      user:
+        name: bert
+        group: bert
+        password: "{{ 'test'|password_hash('sha512') }}"
+        state: present

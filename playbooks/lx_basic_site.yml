@@ -1,12 +1,18 @@
 ---
 # lx_basic.site.yml
 
-- import_playbook: "{{ playbook_dir }}"
-  tags: info
+- name: Import von lxbasic1.yml
+  import_playbook: "{{ playbook_dir }}/../assets/loesungen/linux/lxbasic1.yml"
+  tags: lxbasic1
 
-- import_playbook: packager.yml
-  tags: packager
+- name: Import von lxbasic2.yml
+  import_playbook: "{{ playbook_dir }}/../assets/loesungen/linux/lxbasic2.yml"
+  tags: lxbasic2
 
-- import_playbook: users_info.yml
-  tags: users
+- name: Import von lxbasic3.yml
+  import_playbook: "{{ playbook_dir }}/../assets/loesungen/linux/lxbasic3.yml"
+  tags: lxbasic3
 
+- name: Import von lxbasic4.yml
+  import_playbook: "{{ playbook_dir }}/../assets/loesungen/linux/lxbasic4.yml"
+  tags: lxbasic4

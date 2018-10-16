@@ -1,0 +1,14 @@
+---
+- name: Playbook lxbasic4.yml
+  hosts: linux
+
+  tasks:
+  - name: Installiere git-all
+    yum: 
+      name: git-all
+      state: latest
+
+  - name: Installiere curl
+    yum: 
+      name: curl
+      state: latest

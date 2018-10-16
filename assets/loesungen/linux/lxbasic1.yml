@@ -1,6 +1,7 @@
-#!/bin/bash
+---
+- name: Playbook lxbasic1.yml
+  hosts: linux
 
-# run from ansible-site base direcory!
-
-ansible -i inventories/test/hosts.ini linux -m ping
-
+  tasks:
+  - name: Ping auf alle Linux Hosts
+    ping:

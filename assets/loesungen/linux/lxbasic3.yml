@@ -1,0 +1,20 @@
+---
+- name: Playbook lxbasic3.yml
+  hosts: linux
+
+  tasks:
+
+    - name: Erstelle Verzeichnis /tmp/dateien
+      file:
+        path: "/tmp/dateien"
+        state: directory
+
+    - name: Kopiere Datei example.txt
+      copy:
+        src: "{{ inventory_dir }}/../../files/example.txt"
+        dest: /tmp/dateien
+
+    - name: Kopiere Datei example.txt
+      copy:
+        src: "{{ inventory_dir }}/../../files/example.tgz"
+        dest: /tmp/dateien

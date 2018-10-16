@@ -1,5 +1,5 @@
 ---
-# lx_basic.site.yml
+# lx_basic_site.yml
 
 - name: Import von lxbasic1.yml
   import_playbook: "{{ playbook_dir }}/../assets/loesungen/linux/lxbasic1.yml"

@@ -1,0 +1,12 @@
+---
+# lx_basic.site.yml
+
+- import_playbook: "{{ playbook_dir }}"
+  tags: info
+
+- import_playbook: packager.yml
+  tags: packager
+
+- import_playbook: users_info.yml
+  tags: users
+

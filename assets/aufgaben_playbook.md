@@ -21,9 +21,8 @@ aus dem [files](../files) Verzeichnis in ein vorher erstelltes Verzeichnis.
 ### Basic 4
 Installieren Sie die Pakete
 
-- git
+- git (git-all auf RHEL)
 - curl
-- htop
 
 auf Ihrem remote_host mit dem passenden Packager Modul.
 

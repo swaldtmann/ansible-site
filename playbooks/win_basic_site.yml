@@ -1,0 +1,14 @@
+---
+# win_basic_site.yml
+
+- name: Import von winbasic1.yml
+  import_playbook: "{{ playbook_dir }}/../assets/loesungen/windows/winbasic1.yml"
+
+- name: Import von winbasic2.yml
+  import_playbook: "{{ playbook_dir }}/../assets/loesungen/windows/winbasic2.yml"
+
+- name: Import von winbasic3.yml
+  import_playbook: "{{ playbook_dir }}/../assets/loesungen/windows/winbasic3.yml"
+
+- name: Import von winbasic4.yml
+  import_playbook: "{{ playbook_dir }}/../assets/loesungen/windows/winbasic4.yml"

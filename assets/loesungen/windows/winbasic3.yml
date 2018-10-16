@@ -1,0 +1,20 @@
+---
+- name: Playbook winbasic3.yml
+  hosts: windows
+
+  tasks:
+
+    - name: Erstelle Verzeichnis C:\Temp\Dateien
+      win_file:
+        path: C:\Temp\Dateien
+        state: directory
+
+    - name: Kopiere Datei example.txt
+      win_copy:
+        src: "{{ inventory_dir }}/../../files/example.txt"
+        dest: C:\Temp\Dateien
+
+    - name: Kopiere Datei example.txt
+      win_copy:
+        src: "{{ inventory_dir }}/../../files/example.zip"
+        dest: C:\Temp\Dateien

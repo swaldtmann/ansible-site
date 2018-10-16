@@ -1,0 +1,28 @@
+---
+- name: Playbook winbasic2.yml
+  hosts: windows
+
+  tasks:
+    - name: Erstelle Gruppe für Benutzer bob
+      win_group:
+        name: bob
+        state: present
+
+    - name: Erstelle Benutzer bob
+      win_user:
+        name: bob
+        groups: bob
+        password: "test"
+        state: present
+
+    - name: Erstelle Gruppe für Benutzer bert
+      win_group:
+        name: bert
+        state: present
+
+    - name: Erstelle Benutzer bert
+      win_user:
+        name: bert
+        groups: bert
+        password: "test"
+        state: present

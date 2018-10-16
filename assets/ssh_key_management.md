@@ -10,7 +10,7 @@ ssh-keygen -t rsa -b 4096
 
 ### Ablauf
 
-Nach Eingabe des Befehls die vorgeschlagenen Werte mit <ENTER> übernehmen.
+Nach Eingabe des Befehls die vorgeschlagenen Werte mit \<ENTER\> übernehmen.
 
 ```bash
 $ ssh-keygen -t rsa -b 4096

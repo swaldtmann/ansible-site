@@ -1,0 +1,16 @@
+---
+- name: Playbook winadvanced3.yml
+  hosts: windows
+
+  tasks:
+
+    - name: Erstelle Verzeichnis {{ wa3_dir }}
+      win_file:
+        path: "{{ wa3_dir }}"
+        state: directory
+
+    - name: Kopiere Dateien
+      win_copy:
+        src: "{{ inventory_dir }}/../../files/{{ item }}"
+        dest: "{{ wa3_dir }}"
+      loop: "{{ wa3_files }}"

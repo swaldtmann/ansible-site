@@ -1,0 +1,16 @@
+---
+- name: Playbook winadvanced4.yml
+  hosts: windows
+  become: yes
+
+  tasks:
+  
+  - name: Installiere Pakete
+    win_package: 
+      path: "{{ item.path }}"
+      product_id: "{{ item.product_id }}"
+      state: present
+    loop:
+      - { path: 'https://7-zip.org/a/7z1604-x64.msi', product_id: '???' }
+      - { path: 'https://the.earth.li/~sgtatham/putty/latest/w64/putty-64bit-0.70-installer.msi', product_id: '???' }
+

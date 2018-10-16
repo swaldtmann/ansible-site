@@ -1,0 +1,23 @@
+---
+- name: Playbook winadvanced2.yml
+  hosts: windows
+
+  tasks:
+
+    - name: Erstelle Gruppen
+      win_group:
+        name: "{{ item }}"
+        state: present
+      loop:
+        - bob
+        - bert
+
+    - name: Erstelle Benutzer
+      win_user:
+        name: "{{ item.name }}"
+        groups: "{{ item.name }}"
+        password: "{{ item.password }}"
+        state: present
+      loop:
+        - { name: 'bob', password: 'bob' }
+        - { name: 'bert', password: 'bert' }

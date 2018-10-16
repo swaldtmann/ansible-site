@@ -1,0 +1,18 @@
+---
+# win_advanced_site.yml
+
+- name: Import von winadvanced1.yml
+  import_playbook: "{{ playbook_dir }}/../assets/loesungen/windows/winadvanced1.yml"
+  tags: winadvanced1
+
+- name: Import von winadvanced2.yml
+  import_playbook: "{{ playbook_dir }}/../assets/loesungen/windows/winadvanced2.yml"
+  tags: winadvanced2
+
+- name: Import von winadvanced3.yml
+  import_playbook: "{{ playbook_dir }}/../assets/loesungen/windows/winadvanced3.yml"
+  tags: winadvanced3
+
+- name: Import von winadvanced4.yml
+  import_playbook: "{{ playbook_dir }}/../assets/loesungen/windows/winadvanced4.yml"
+  tags: winadvanced4

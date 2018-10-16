@@ -1,0 +1,11 @@
+---
+antwort: 42
+
+userlist:
+  - root
+  - userlist_from_hostvars
+
+wa3_files:
+  - example.txt
+  - example.zip
+

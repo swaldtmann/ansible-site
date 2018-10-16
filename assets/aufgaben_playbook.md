@@ -64,8 +64,8 @@ aus dem [files](../files) Verzeichnis in ein vorher erstelltes Verzeichnis.
 ### Basic 4
 Installieren Sie MSI Pakete
 
-- 7 Zip
-- Putty
+- 7 Zip (notfalls aus der Quelle: https://7-zip.org/a/7z1604-x64.msi)
+- Putty (notfalls aus der Quelle: https://the.earth.li/~sgtatham/putty/latest/w64/putty-64bit-0.70-installer.msi)
 
 auf Ihrem remote_host mit dem passenden Packager Modul. Die MSI Dateien müssen vorher auf den Zielhost kopiert werden.
 

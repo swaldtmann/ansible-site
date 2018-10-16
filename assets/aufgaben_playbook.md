@@ -84,7 +84,3 @@ Packagers basierend auf den Host Facts bzw der Ansible Version.
 
 ### Advanced 5
 Führen Sie die Aufgabe Basic 5 aus und vergeben Sie für jedes playbook ein eigenes Tag.
-
-### Advanced 4
-Führen Sie die Aufgabe Basic 4 aus, unter Anwendung von loop und der Auswahl des
-Packagers basierend auf den Host Facts bzw der Ansible Version.

@@ -7,7 +7,7 @@
   - name: Installiere git-all
     yum: 
       name: "{{ item }}"
-      state: latest
+      state: absent
     loop:
      - git-all
     when: ansible_distribution == 'CentOS' or ansible_distribution == 'Red Hat Enterprise Linux'

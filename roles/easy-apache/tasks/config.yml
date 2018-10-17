@@ -1,0 +1,17 @@
+---
+- name: Pakete installieren
+  yum:
+    name: "{{ packages }}"
+    update_cache: yes
+    state: present
+  when: packages is defined
+
+- name: Document root anlegen
+  file:
+    path: "{{ item.document_root }}"
+    state: directory
+    owner: "{{ item.owner }}"
+    group: "{{ item.group }}"
+    mode: 02755
+  loop: "{{ site }}"
+  when: site is defined

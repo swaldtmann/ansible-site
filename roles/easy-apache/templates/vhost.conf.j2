@@ -1,0 +1,10 @@
+<VirtualHost *:{{ item.port }}>
+  ServerAdmin {{ item.email }}
+  DocumentRoot {{ item.document_root }}
+{% if item.name is defined %}
+  ServerName {{ item.name }}
+{% endif %}
+  ErrorLog logs/{{ item.name }}_error.log
+  CustomLog logs/{{ item.name }}_access.log combined
+</VirtualHost>
+

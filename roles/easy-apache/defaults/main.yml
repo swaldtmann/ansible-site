@@ -1,0 +1,18 @@
+---
+# defaults file for easy-apache
+
+packages:
+  - curl
+  - git-all
+  - vim
+  - httpd
+
+site:
+  - name: TestSite
+    document_root: /var/www/test
+    owner: apache
+    group: apache
+    mode: 02775
+    message: "Gebaut mit einer Ansible Rolle."
+    port: 80
+    email: test@example.com

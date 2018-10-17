@@ -1,0 +1,8 @@
+---
+# handlers file for easy-apache
+
+- name: reload httpd
+  service:
+    name: httpd
+    state: reloaded
+

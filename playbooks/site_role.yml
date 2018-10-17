@@ -1,0 +1,8 @@
+---
+# site_role.yml
+- hosts: webservers
+  become: no
+
+  roles:
+    - { role: easy-apache }
+

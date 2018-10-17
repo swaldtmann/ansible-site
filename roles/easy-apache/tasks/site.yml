@@ -1,0 +1,30 @@
+---
+- name: Apache vhost anlegen
+  template:
+    src: ../templates/vhost.conf.j2
+    dest: "/etc/httpd/conf.d/{{item.name}}.conf"
+    owner: root
+    group: root
+    mode: 0644
+  loop: "{{ site }}"
+  when: site is defined
+  notify: reload httpd
+
+- name: index.html hinzufügen
+  template:
+    src: ../templates/index.html.j2
+    dest: "{{ item.document_root }}/index.html"
+    #owner: “{{ item.owner }}”
+    owner: apache
+    #group: “{{ item.group }}”
+    group: apache
+    mode: 0664
+  loop: "{{ site }}"
+  when: site is defined
+  notify: reload httpd
+
+- name: httpd start
+  service:
+    name: httpd
+    state: started
+    enabled: yes

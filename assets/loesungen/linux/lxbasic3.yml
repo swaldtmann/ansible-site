@@ -14,7 +14,7 @@
         src: "{{ inventory_dir }}/../../files/example.txt"
         dest: /tmp/dateien
 
-    - name: Kopiere Datei example.txt
+    - name: Kopiere Datei example.tgz
       copy:
         src: "{{ inventory_dir }}/../../files/example.tgz"
         dest: /tmp/dateien

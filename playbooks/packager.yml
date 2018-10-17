@@ -1,16 +1,13 @@
 ---
 - name: Playbook packager.yml
-  hosts: all
+  hosts: linux
   become: yes
 
   tasks:
-    - name: Zeige den automatisch gefundenen Packager
-      package_facts:
-        manager: "auto"
-      register: pf
-
-    - name: Zeige die zurückgelieferten Variabeln
-      debug: var=pf
-
-    - name: Zeige die gefundenen Pakete
-      debug: var=ansible_facts.packages
+  - name: Installiere git-all
+    yum: 
+      name: "{{ item }}"
+      state: latest
+    loop:
+     - git-all
+    when: ansible_distribution == 'CentOS' or ansible_distribution == 'Red Hat Enterprise Linux'

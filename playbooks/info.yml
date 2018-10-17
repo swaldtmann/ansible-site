@@ -1,6 +1,6 @@
 ---
 - name: Playbook info.yml
-  hosts: all,localhost
+  hosts: all
   environment: 
     Target: test
 
@@ -25,9 +25,9 @@
       var: hostvars[inventory_hostname]
       verbosity: 2
 
-  - name: Prüfe, ob 'antwort' gesetzt ist.
-    fail: 
-      msg: "Abbruch! dieses Playbook benötigt die Variable 'antwort'"
+  - name: Prüfe, ob 'antwort' definiert wurde.
+    debug: 
+      msg: "Die Variable 'antwort' ist nicht definiert."
     when: antwort is undefined
 
 

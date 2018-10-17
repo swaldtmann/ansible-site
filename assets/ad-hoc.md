@@ -34,5 +34,5 @@ ansible localhost -m setup -a 'filter=ansible_eth[0-2]'
 ## Windows Demo mit Modul win_say
 
 ```bash
-ansible -i inventories/test/hosts.ini windows -m win_say -a "msg='Hi! This is a demo' start_sound_path='C:\\windows\\media\\ding.wav' speech_speed=2"
+ansible -i inventories/test/hosts.ini windows -m win_msg -a "msg='Hi! This is a demo' display_seconds: 240"
 ```

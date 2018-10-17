@@ -2,7 +2,7 @@
 
 - Legen Sie eine Rolle im Verzeichnis [roles](../roles) an. Nutzen Sie dabei zur Initialisierung der Rolle den Befehl ansible-galaxy.
 
-- Erstellen Sie in [playbooks](../playbook) ein playbook, dass Ihre Rolle ohne Angabe von Parametern anwendet.
+- Erstellen Sie in [playbooks](../playbooks) ein playbook, dass Ihre Rolle ohne Angabe von Parametern anwendet.
 
 - Erstellen Sie ein Shell-Script (.sh) im Stammverzeichnis dieses Repository zum Ausführen des oben angelegten playbooks.
 

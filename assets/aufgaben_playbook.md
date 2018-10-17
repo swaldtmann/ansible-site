@@ -4,13 +4,16 @@ Speichern Sie das Script für jede Aufgabe in einer YAML Datei im Verzeichnis [p
 
 ## Linux
 
-### Basic 1
+### Linux Basic 1
+
 Überprüfen Sie die Verbindung zum remote_host als Adhoc Kommando mit dem ping Modul und mit einem Playbook.
 
-### Basic 2
+### Linux Basic 2
+
 Erstellen Sie zwei Benutzer auf dem Zielsystem mit dem Modul user.
 
-### Basic 3
+### Linux Basic 3
+
 Kopieren Sie die Dateien
 
 - example.txt
@@ -18,7 +21,8 @@ Kopieren Sie die Dateien
 
 aus dem [files](../files) Verzeichnis in ein vorher erstelltes Verzeichnis.
 
-### Basic 4
+### Linux Basic 4
+
 Installieren Sie die Pakete
 
 - git (git-all auf RHEL)
@@ -26,34 +30,43 @@ Installieren Sie die Pakete
 
 auf Ihrem remote_host mit dem passenden Packager Modul.
 
-### Basic 5
+### Linux Basic 5
+
 Erstellen Sie eine site.yml mit den bisher erstellten playbooks.
 
-### Advanced 1
+### Linux Advanced 1
+
 Identisch zu Basic 1
 
-### Advanced 2
+### Linux Advanced 2
+
 Führen Sie die Aufgabe Basic 2 aus, unter Anwendung von loop.
 
-### Advanced 3
-Führen Sie die Aufgabe Basic 3 aus. Die Dateinamen Konfigurieren Sie in einer Host Variaben, den Zielpfad in einer Host Variablen.
+### Linux Advanced 3
 
-### Advanced 4
+Führen Sie die Aufgabe Basic 3 aus. Die Dateinamen Konfigurieren Sie in einer Host Variablen, den Zielpfad in einer Host Variablen.
+
+### Linux Advanced 4
+
 Führen Sie die Aufgabe Basic 4 aus, unter Anwendung von loop und der Auswahl des
-Packagers basierend auf den Host Facts bzw der Ansible Version
+Packagers basierend auf den Host Facts bzw. der Ansible Version
 
-### Advanced 5
+### Linux Advanced 5
+
 Führen Sie die Aufgabe Basic 5 aus und vergeben Sie für jedes playbook ein eigenes Tag
 
 ## Windows
 
-### Basic 1
+### Windows Basic 1
+
 Überprüfen Sie die Verbindung zum remote_host als Adhoc Kommando mit dem win_ping Modul und mit einem Playbook.
 
-### Basic 2
+### Windows Basic 2
+
 Erstellen Sie zwei Benutzer auf dem Zielsystem mit dem Modul win_user.
 
-### Basic 3
+### Windows Basic 3
+
 Kopieren Sie die Dateien
 
 - example.txt
@@ -61,29 +74,36 @@ Kopieren Sie die Dateien
 
 aus dem [files](../files) Verzeichnis in ein vorher erstelltes Verzeichnis.
 
-### Basic 4
+### Windows Basic 4
+
 Installieren Sie MSI Pakete
 
-- 7 Zip (notfalls aus der Quelle: https://7-zip.org/a/7z1604-x64.msi)
-- Putty (notfalls aus der Quelle: https://the.earth.li/~sgtatham/putty/latest/w64/putty-64bit-0.70-installer.msi)
+- 7 Zip (notfalls aus der Quelle: <https://7-zip.org/a/7z1604-x64.msi)>
+- Putty (notfalls aus der Quelle: <https://the.earth.li/~sgtatham/putty/latest/w64/putty-64bit-0.70-installer.msi)>
 
 auf Ihrem remote_host mit dem passenden Packager Modul. Die MSI Dateien müssen vorher auf den Zielhost kopiert werden.
 
-### Basic 5
+### Windows Basic 5
+
 Erstellen Sie eine site.yml mit den bisher erstellten playbooks.
 
-### Advanced 1
+### Windows Advanced 1
+
 Identisch zu Basic 1
 
-### Advanced 2
+### Windows Advanced 2
+
 Führen Sie die Aufgabe Basic 2 aus, unter Anwendung von loop.
 
-### Advanced 3
-Führen Sie die Aufgabe Basic 3 aus. Die Dateinamen Konfigurieren Sie in einer Host Variaben, den Zielpfad in einer Host Variablen.
+### Windows Advanced 3
 
-### Advanced 4
+Führen Sie die Aufgabe Basic 3 aus. Die Dateinamen Konfigurieren Sie in einer Host Variablen, den Zielpfad in einer Host Variablen.
+
+### Windows Advanced 4
+
 Führen Sie die Aufgabe Basic 4 aus, unter Anwendung von loop und der Auswahl des
-Packagers basierend auf den Host Facts bzw der Ansible Version. 
+Packagers basierend auf den Host Facts bzw. der Ansible Version.
 
-### Advanced 5
+### Windows Advanced 5
+
 Führen Sie die Aufgabe Basic 5 aus und vergeben Sie für jedes playbook ein eigenes Tag.

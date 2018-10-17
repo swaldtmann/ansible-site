@@ -9,6 +9,8 @@
 - <https://docs.ansible.com/ansible/latest/user_guide/playbooks_debugger.html>
 - <https://docs.ansible.com/ansible/latest/user_guide/playbooks_variables.html#variable-precedence-where-should-i-put-a-variable>
 - <https://ansible-tips-and-tricks.readthedocs.io/en/latest/os-dependent-tasks/installing_packages/>
+- <https://www.azavea.com/blog/2014/10/09/creating-ansible-roles-from-scratch-part-1/>
+- <https://medium.com/@davidedimauro/let-s-build-an-ansible-role-2815cd488797>
 
 ## Kommunikation und Quellen
 - <https://www.ansible.com/>

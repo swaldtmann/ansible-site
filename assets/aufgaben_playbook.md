@@ -69,6 +69,9 @@ Installieren Sie MSI Pakete
 
 auf Ihrem remote_host mit dem passenden Packager Modul. Die MSI Dateien müssen vorher auf den Zielhost kopiert werden.
 
+### Basic 5
+Erstellen Sie eine site.yml mit den bisher erstellten playbooks.
+
 ### Advanced 1
 Identisch zu Basic 1
 

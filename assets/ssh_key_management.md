@@ -1,9 +1,9 @@
 # SSH Key Management
 
-
 ## Schlüsselpaar erzeugen
 
 ### Befehl
+
 ```bash
 ssh-keygen -t rsa -b 4096
 ```
@@ -40,7 +40,7 @@ The key's randomart image is:
 
 Im Homeverzeichnis entstehen im Verzeichnis ".ssh" die Dateien:
 
-- id_rsa  - der private Key 
+- id_rsa  - der private Key
 - id_rsa.pub  - der public Key
 
 Anzeigen der Dateien mit einem Editor oder unter Linux per:

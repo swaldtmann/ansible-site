@@ -10,6 +10,6 @@
 
 - Überprüfen Sie die Lauffähigkeit der Rolle regelmäßig.
 
-- Legen Sie ein Git Repository an und Übertragen Sie die Rolle - soweit möglich - auf einen Remote Server.
+(- Legen Sie ein Git Repository an und Übertragen Sie die Rolle - soweit möglich - auf einen Remote Server.)
 
 - Präsentieren oder erklären Sie Ihre Rolle den anderen Kursteilnehmern

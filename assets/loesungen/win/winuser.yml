@@ -1,0 +1,13 @@
+---
+- name: Winuser.yml
+  hosts: windows
+
+  tasks:
+         
+  - name: Testuser anlegen
+    win_user:
+      name: Tester
+      password: MyS!ecret&2018
+      state: present
+      groups:
+        - Benutzer

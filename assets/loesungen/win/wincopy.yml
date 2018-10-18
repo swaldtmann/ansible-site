@@ -1,0 +1,19 @@
+---
+- hosts: windows
+  vars:
+    src_path: ../files/example.txt 
+    dest: c:\temp\
+      
+  tasks:  
+  - name: Make Dir Temp
+    win_file:
+      path: "{{ dest }}"
+      state: directory
+
+  - name: Copy Dateien
+    win_copy:
+      src: "{{ src_path }}"
+      dest: "{{ dest }}"
+
+
+

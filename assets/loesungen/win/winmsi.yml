@@ -1,0 +1,18 @@
+---
+- hosts: windows
+  vars:
+    source_path: "{{ src_path }}" 
+    product_id: "{{ prod_id }}"
+      
+  tasks:  
+  - name: Copy MSI to Windows
+    win_copy:
+      src: "{{ src_path }}"
+      dest: C:\
+
+  - name: Install Remote Desktop Connection Manager from msi
+    win_package:
+      path: C:\Putty\putty-0.70-installer.msi
+      product_id: "{{ prod_id }}"
+      state: present
+

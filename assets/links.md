@@ -12,6 +12,8 @@
 - <https://ansible-tips-and-tricks.readthedocs.io/en/latest/os-dependent-tasks/installing_packages/>
 - <https://www.azavea.com/blog/2014/10/09/creating-ansible-roles-from-scratch-part-1/>
 - <https://medium.com/@davidedimauro/let-s-build-an-ansible-role-2815cd488797>
+- <https://docs.ansible.com/ansible/latest/reference_appendices/YAMLSyntax.html>
+- <https://docs.ansible.com/ansible/2.6/user_guide/playbooks_templating.html> Jinja2
 
 ## Kommunikation und Quellen
 

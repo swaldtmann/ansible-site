@@ -7,7 +7,7 @@
   - name: Testuser anlegen
     win_user:
       name: Tester
-      password: MyS!ecret&2018
+      password: <pass>
       state: present
       groups:
         - Benutzer

@@ -1,7 +1,7 @@
-es (22 sloc)  590 Bytes
 ---
 - name: Playbook users_info.yml
   hosts: all
+  become: yes
 #  gather_facts: False
 #  vars:
 #    userlist: 

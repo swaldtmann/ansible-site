@@ -10,5 +10,5 @@ Hinweise:
 - Host Vars im Verzeichnis host_vars in dem Verzeichnis, in dem auch die Inventory Datei liegt.
 
 
-- ansible-vault create "<vault file>"
-- ansible-vault edit "<vault file>"
+- ansible-vault create "\<vault file>\"
+- ansible-vault edit "\<vault file>\"

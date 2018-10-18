@@ -1,6 +1,10 @@
 # Aufgaben Role
 
-- Legen Sie eine Rolle im Verzeichnis [roles](../roles) an. Nutzen Sie dabei zur Initialisierung der Rolle den Befehl ansible-galaxy.
+- Legen Sie eine Rolle im Verzeichnis [roles](../roles) an. Nutzen Sie dabei zur Initialisierung der Rolle den Befehl 
+
+```bash
+ansible-galaxy init <rolename>
+```
 
 - Erstellen Sie in [playbooks](../playbooks) ein playbook, dass Ihre Rolle ohne Angabe von Parametern anwendet.
 

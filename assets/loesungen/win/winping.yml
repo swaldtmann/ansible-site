@@ -1,6 +1,0 @@
----
-- hosts:  windows
-  tasks:  
-  - name: Ping absetzen
-    win_ping:
-

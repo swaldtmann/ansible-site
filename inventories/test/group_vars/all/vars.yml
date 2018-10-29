@@ -3,8 +3,7 @@ web_group: "{{ vault_web_group }}"
 web_user: "{{ vault_web_user }}"
 
 # Multi Line Final Comments
-final_comments: |-
-         Ansible Playbook abgeschlossen. 
-         Weitere Schritte:
-         - <Mehr Text ab hier>
-
+#final_comments: |-
+#         Ansible Playbook abgeschlossen. 
+#         Weitere Schritte:
+#         - <Mehr Text ab hier>

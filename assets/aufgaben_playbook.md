@@ -97,7 +97,7 @@ Führen Sie die Aufgabe Basic 2 aus, unter Anwendung von loop.
 
 ### Windows Advanced 3
 
-Führen Sie die Aufgabe Basic 3 aus. Die Dateinamen Konfigurieren Sie in einer Host Variablen, den Zielpfad in einer Host Variablen.
+Führen Sie die Aufgabe Basic 3 aus. Die Dateinamen Konfigurieren Sie in einer Host Variablen, den Zielpfad in einer Group Variablen.
 
 ### Windows Advanced 4
 

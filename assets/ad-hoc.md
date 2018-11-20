@@ -31,8 +31,8 @@ ansible localhost -m setup -a 'filter=ansible_distribution*'
 ansible localhost -m setup -a 'filter=ansible_eth[0-2]'
 ```
 
-## Windows Demo mit Modul win_say
+## Windows Demo mit Modul win_msg
 
 ```bash
-ansible -i inventories/test/hosts.ini windows -m win_msg -a "msg='Hi! This is a demo' display_seconds: 240"
+ansible -i inventories/test/hosts.ini windows -m win_msg -a 'msg="Hi! This is a demo" display_seconds: 240'
 ```

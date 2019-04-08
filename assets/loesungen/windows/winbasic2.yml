@@ -3,26 +3,26 @@
   hosts: windows
 
   tasks:
-    - name: Erstelle Gruppe für Benutzer bob
-      win_group:
-        name: bob
-        state: present
+  - name: Erstelle Gruppe für Benutzer bob
+    win_group:
+      name: bob_group
+      state: present
 
-    - name: Erstelle Benutzer bob
-      win_user:
-        name: bob
-        groups: bob
-        password: "test"
-        state: present
+  - name: Erstelle Benutzer bob
+    win_user:
+      name: bob
+      groups: bob_group
+      password: "Test,1234567890"
+      state: present
 
-    - name: Erstelle Gruppe für Benutzer bert
-      win_group:
-        name: bert
-        state: present
+  - name: Erstelle Gruppe für Benutzer bert
+    win_group:
+      name: bert_group
+      state: present
 
-    - name: Erstelle Benutzer bert
-      win_user:
-        name: bert
-        groups: bert
-        password: "test"
-        state: present
+  - name: Erstelle Benutzer bert
+    win_user:
+      name: bert
+      groups: bert_group
+      password: "Test,1234567890"
+      state: present

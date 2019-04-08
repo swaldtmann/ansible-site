@@ -12,9 +12,9 @@
     - name: Kopiere Datei example.txt
       win_copy:
         src: "{{ inventory_dir }}/../../files/example.txt"
-        dest: C:\Temp\Dateien
+        dest: C:\Temp\Dateien\example.txt
 
-    - name: Kopiere Datei example.txt
+    - name: Kopiere Datei example.zip
       win_copy:
         src: "{{ inventory_dir }}/../../files/example.zip"
-        dest: C:\Temp\Dateien
+        dest: C:\Temp\Dateien\example.zip

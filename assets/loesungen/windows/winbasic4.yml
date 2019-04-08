@@ -3,14 +3,28 @@
   hosts: windows
 
   tasks:
-  - name: Installiere 7-Zip
-    win_package:
-      path: "https://7-zip.org/a/7z1604-x64.msi"
-      product_id: '???'
-      state: present 
+    - name: Erstelle Verzeichnis C:\Temp\MSIs
+      win_file:
+        path: C:\Temp\MSIs
+        state: directory
 
-  - name: Installiere Putty
-    win_package:
-      path: "https://the.earth.li/~sgtatham/putty/latest/w64/putty-64bit-0.70-installer.msi"
-      product_id: '???'
-      state: present 
+    - name: Kopiere Datei 7z1604-x64.msi
+      win_copy:
+        src: /msis/7z1604-x64.msi
+        dest: C:\Temp\MSIs\
+
+    - name: Install 7zip and use a file version for the installation check
+      win_package:
+        path: C:\Temp\MSIs\7z1604-x64.msi
+        creates_path: 'C:\Program Files\7-Zip\7z.exe'
+        state: present
+
+    - name: Kopiere Datei putty-64bit-0.71-installer.msi
+      win_copy:
+        src: /msis/putty-64bit-0.71-installer.msi
+        dest: C:\Temp\MSIs\
+
+    - name: Install putty and use a file version for the installation check
+      win_package:
+        path: C:\Temp\MSIs\putty-64bit-0.71-installer.msi
+        state: present

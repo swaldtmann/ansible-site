@@ -48,7 +48,7 @@ Führen Sie die Aufgabe Basic 3 aus. Die Dateinamen Konfigurieren Sie in einer H
 
 ### Linux Advanced 4
 
-Führen Sie die Aufgabe Basic 4 aus, unter Anwendung von loop und der Auswahl des
+Führen Sie die Aufgabe Basic 4 aus, mit Auswahl des
 Packagers basierend auf den Host Facts bzw. der Ansible Version
 
 ### Linux Advanced 5

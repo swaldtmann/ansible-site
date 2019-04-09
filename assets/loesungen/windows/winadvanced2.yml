@@ -1,5 +1,5 @@
 ---
-- name: Playbook win_adv2.yml
+- name: Playbook winadvanced2.yml
   hosts: windows
   gather_facts: no
 

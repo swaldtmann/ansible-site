@@ -1,16 +1,39 @@
 ---
-- name: Playbook winadvanced4.yml
+- name: Playbook win_adv4.yml
   hosts: windows
-  become: yes
+  gather_facts: no
+  vars:
+    status: present
+    msi_src_path: /msis/
+    msi_dst_path: C:\Temp\MSIs\
+    msi_dateien:
+      - { name: '7z1604-x64.msi', erzeugt: 'C:\Program Files\7-Zip\7z.exe', version: '16.04' }
+      - { name: 'putty-64bit-0.71-installer.msi', erzeugt: 'C:\Program Files\PuTTY\putty.exe', version: '0.71.0.0' }
 
   tasks:
-  
-  - name: Installiere Pakete
-    win_package: 
-      path: "{{ item.path }}"
-      product_id: "{{ item.product_id }}"
-      state: present
-    loop:
-      - { path: 'https://7-zip.org/a/7z1604-x64.msi', product_id: '???' }
-      - { path: 'https://the.earth.li/~sgtatham/putty/latest/w64/putty-64bit-0.70-installer.msi', product_id: '???' }
+    - name: Erstelle Verzeichnis {{ msi_dst_path }}
+      win_file:
+        path: "{{ msi_dst_path }}"
+        state: directory
+      when: status == 'present'
 
+    - name: Lösche Verzeichnis {{ msi_dst_path }}
+      win_file:
+        path: "{{ msi_dst_path }}"
+        state: absent
+      when: status == 'absent'
+
+    - name: Kopiere Dateien
+      win_copy:
+        src: "{{ msi_src_path }}{{ item.name }}"
+        dest: C:\Temp\MSIs\
+      loop: "{{ msi_dateien }}"
+
+    - name: Installiere Pakete
+      win_package:
+        path: "{{ msi_dst_path }}{{ item.name }}"
+        creates_path: "{{ item.erzeugt }}"
+        creates_version:  "{{ item.version }}"
+        state: "{{ status }}"
+      loop: "{{ msi_dateien }}"
+      when: status == 'present'

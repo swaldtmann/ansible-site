@@ -1,23 +1,26 @@
 ---
-- name: Playbook winadvanced2.yml
+- name: Playbook win_adv2.yml
   hosts: windows
+  gather_facts: no
+
+  vars:
+    status: absent
+    #status: present
+    benutzer:
+      - { name: 'Horst', gruppe: 'technik', kennwort: 'Test,1234567890' }
+      - { name: 'Heinz', gruppe: 'marketing', kennwort: 'Test,1234567890' }
 
   tasks:
+  - name: Erstelle oder entferne Gruppen - state={{ status }}
+    win_group:
+      name: "{{ item.gruppe }}"
+      state: "{{ status }}"
+    loop: "{{ benutzer }}"
 
-    - name: Erstelle Gruppen
-      win_group:
-        name: "{{ item }}"
-        state: present
-      loop:
-        - bob
-        - bert
-
-    - name: Erstelle Benutzer
-      win_user:
-        name: "{{ item.name }}"
-        groups: "{{ item.name }}"
-        password: "{{ item.password }}"
-        state: present
-      loop:
-        - { name: 'bob', password: 'bob' }
-        - { name: 'bert', password: 'bert' }
+  - name: Erstelle oder entferne Benutzer - state={{ status }}
+    win_user:
+      name: "{{ item.name }}"
+      groups: "{{ item.gruppe }}"
+      password: "{{ item.kennwort }}"
+      state: "{{ status }}"
+    loop: "{{ benutzer }}"

@@ -1,16 +1,31 @@
 ---
 - name: Playbook winadvanced3.yml
-  hosts: windows
+  hosts: all
+  gather_facts: true
+
+  vars:
+    status: directory
+    #state: absent
+    examples_source_path: "{{ playbook_dir }}/../files/"
+    examples_dest_path: C:\Temp\Dateien\
+    examples_files:
+      - example.txt
+      - example.zip
 
   tasks:
+    - name: Prüfe auf korrektes Betriebssystem
+      fail:
+        msg: "Falsches Betriebssystem!"
+      when: ansible_facts['os_family'] != 'Windows'
 
-    - name: Erstelle Verzeichnis {{ wa3_dir }}
+    - name: Erstelle oder lösche Verzeichnis {{ examples_dest_path }} - state={{ status }}
       win_file:
-        path: "{{ wa3_dir }}"
-        state: directory
+        path: "{{ examples_dest_path }}"
+        state: "{{ status }}"
 
     - name: Kopiere Dateien
       win_copy:
-        src: "{{ inventory_dir }}/../../files/{{ item }}"
-        dest: "{{ wa3_dir }}"
-      loop: "{{ wa3_files }}"
+        src: "{{ examples_source_path }}/{{ item }}"
+        dest: "{{ examples_dest_path }}"
+      loop: "{{ examples_files }}"
+      when: status != "absent"

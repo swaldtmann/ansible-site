@@ -19,7 +19,7 @@ Kopieren Sie die Dateien
 - example.txt
 - example.tgz
 
-aus dem [files](../files) Verzeichnis in ein vorher erstelltes Verzeichnis.
+aus dem [files](../files) (oder /tmp) Verzeichnis in ein vorher erstelltes Verzeichnis.
 
 ### Linux Basic 4
 
@@ -32,7 +32,7 @@ auf Ihrem remote_host mit dem passenden Packager Modul.
 
 ### Linux Basic 5
 
-Erstellen Sie eine site.yml mit den bisher erstellten playbooks.
+Erstellen Sie eine site.yml mit den bisher erstellten playbooks mit Hilfe des Befehls import_playbook .
 
 ### Linux Advanced 1
 

@@ -75,7 +75,7 @@ aus dem [files](../files) (oder /tmp) Verzeichnis in ein vorher erstelltes Verze
 
 ### Windows Basic 4
 
-Installieren Sie MSI Pakete
+Installieren Sie MSI Pakete aus /msis/
 
 - 7 Zip (notfalls aus der Quelle: <https://7-zip.org/a/7z1604-x64.msi>)
 - Putty (notfalls aus der Quelle: <https://the.earth.li/~sgtatham/putty/latest/w64/putty-64bit-0.70-installer.msi>)

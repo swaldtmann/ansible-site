@@ -71,7 +71,7 @@ Kopieren Sie die Dateien
 - example.txt
 - example.zip
 
-aus dem [files](../files) Verzeichnis in ein vorher erstelltes Verzeichnis.
+aus dem [files](../files) (oder /tmp) Verzeichnis in ein vorher erstelltes Verzeichnis.
 
 ### Windows Basic 4
 

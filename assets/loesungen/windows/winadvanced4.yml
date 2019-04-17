@@ -8,8 +8,9 @@
     msi_dst_path: C:\Temp\MSIs\
     msi_dateien:
       - { name: '7z1604-x64.msi', erzeugt: 'C:\Program Files\7-Zip\7z.exe', version: '16.04' }
-      - { name: 'putty-64bit-0.71-installer.msi', erzeugt: 'C:\Program Files\PuTTY\putty.exe', version: '0.71.0.0' }
-
+      - { name: 'putty-64bit-0.71-installer.msi', erzeugt: 'C:\Program Files\PuTTY\putty.exe', version: 'Release 0.71 (without embedded help)' }
+      # Version aus: win_file_version.file_version mit Modul win_file_version auf Exe-Path
+      
   tasks:
     - name: Erstelle Verzeichnis {{ msi_dst_path }}
       win_file:
